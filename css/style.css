@@ -253,7 +253,7 @@ a {
 #container .left-col .intrude-less {
   width: 76%;
   text-align: center;
-  margin: 112px auto 0;
+  margin: 0px auto 0;
 }
 #container .mid-col {
   position: absolute;
