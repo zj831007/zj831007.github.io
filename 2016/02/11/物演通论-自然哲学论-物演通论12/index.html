@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="7pbUkc9qWk" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>物态递变梯度 | 以简之名</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x4F9D;&amp;#x636E;&amp;#x73B0;&amp;#x5728;&amp;#x7269;&amp;#x7406;&amp;#x5B66;&amp;#x3001;&amp;#x5316;&amp;#x5B66;&amp;#x548C;&amp;#x751F;&amp;#x7269;&amp;#x5B66;&amp;#x7684;&amp;#x7814;&amp;#x7A76;&amp;#x6210;&amp;#x679C;&amp;#xFF0C;&amp;#x4ECE;&amp;#x535A;&amp;#x7269;&amp;#x5B66;&amp;#x7684;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="物态递变梯度">
+<meta property="og:url" content="http://zj831007.github.io/2016/02/11/物演通论-自然哲学论-物演通论12/index.html">
+<meta property="og:site_name" content="以简之名">
+<meta property="og:description" content="&amp;#x4F9D;&amp;#x636E;&amp;#x73B0;&amp;#x5728;&amp;#x7269;&amp;#x7406;&amp;#x5B66;&amp;#x3001;&amp;#x5316;&amp;#x5B66;&amp;#x548C;&amp;#x751F;&amp;#x7269;&amp;#x5B66;&amp;#x7684;&amp;#x7814;&amp;#x7A76;&amp;#x6210;&amp;#x679C;&amp;#xFF0C;&amp;#x4ECE;&amp;#x535A;&amp;#x7269;&amp;#x5B66;&amp;#x7684;">
+<meta property="og:image" content="http://zj831007.github.io/2016/02/11/物演通论-自然哲学论-物演通论12/衍存梯度示意图.png">
+<meta property="og:updated_time" content="2016-02-14T07:47:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="物态递变梯度">
+<meta name="twitter:description" content="&amp;#x4F9D;&amp;#x636E;&amp;#x73B0;&amp;#x5728;&amp;#x7269;&amp;#x7406;&amp;#x5B66;&amp;#x3001;&amp;#x5316;&amp;#x5B66;&amp;#x548C;&amp;#x751F;&amp;#x7269;&amp;#x5B66;&amp;#x7684;&amp;#x7814;&amp;#x7A76;&amp;#x6210;&amp;#x679C;&amp;#xFF0C;&amp;#x4ECE;&amp;#x535A;&amp;#x7269;&amp;#x5B66;&amp;#x7684;">
+  
+    <link rel="alternative" href="/atom.xml" title="以简之名" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://zj831007.github.io/img/avata.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">以简之名</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">简单地生长，自然地分化</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">归档</a></li>
+				        
+							<li><a href="/tags/哲学">哲学</a></li>
+				        
+							<li><a href="/tags/股指">股指</a></li>
+				        
+							<li><a href="/tags/缠论">缠论</a></li>
+				        
+							<li><a href="/tags/实盘">实盘</a></li>
+				        
+							<li><a href="/tags/音乐">音乐</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zj831007.github.io" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1822718091?is_all=1" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/哲学/" style="font-size: 20px;">哲学</a> <a href="/tags/实盘/" style="font-size: 10px;">实盘</a> <a href="/tags/精神哲学/" style="font-size: 15px;">精神哲学</a> <a href="/tags/缠论/" style="font-size: 16.67px;">缠论</a> <a href="/tags/股指/" style="font-size: 13.33px;">股指</a> <a href="/tags/自然哲学/" style="font-size: 18.33px;">自然哲学</a> <a href="/tags/音乐/" style="font-size: 11.67px;">音乐</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">
+						我是谁，我从哪里来，我到哪里去？
+					</div>
+					<div>支付宝打赏！<div/>
+					<div><img src="http://zj831007.github.io/img/alipay.jpg"/></div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">以简之名</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://zj831007.github.io/img/avata.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">以简之名</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">简单地生长，自然地分化</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">归档</a></li>
+		        
+					<li><a href="/tags/哲学">哲学</a></li>
+		        
+					<li><a href="/tags/股指">股指</a></li>
+		        
+					<li><a href="/tags/缠论">缠论</a></li>
+		        
+					<li><a href="/tags/实盘">实盘</a></li>
+		        
+					<li><a href="/tags/音乐">音乐</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zj831007.github.io" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1822718091?is_all=1" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-物演通论-自然哲学论-物演通论12" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/11/物演通论-自然哲学论-物演通论12/" class="article-date">
+  	<time datetime="2016-02-11T01:44:42.000Z" itemprop="datePublished">2016-02-11</time>
+</a>
+    </div>
+  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      物态递变梯度
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/哲学/">哲学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自然哲学/">自然哲学</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>&#x4F9D;&#x636E;&#x73B0;&#x5728;&#x7269;&#x7406;&#x5B66;&#x3001;&#x5316;&#x5B66;&#x548C;&#x751F;&#x7269;&#x5B66;&#x7684;&#x7814;&#x7A76;&#x6210;&#x679C;&#xFF0C;&#x4ECE;&#x535A;&#x7269;&#x5B66;&#x7684;&#x603B;&#x4F53;&#x89D2;&#x5EA6;&#x5BA1;&#x89C6;&#xFF0C;&#x5B87;&#x5B99;&#x4E4B;&#x6F14;&#x5316;&#x5448;&#x73B0;&#x51FA;&#x5982;&#x4E0B;<strong>&#x4E00;&#x7CFB;&#x5217;&#x7269;&#x6001;&#x9012;&#x53D8;&#x7684;&#x68AF;&#x5EA6;</strong>&#xFF1A;<br><a id="more"></a><br><img src="/2016/02/11/&#x7269;&#x6F14;&#x901A;&#x8BBA;-&#x81EA;&#x7136;&#x54F2;&#x5B66;&#x8BBA;-&#x7269;&#x6F14;&#x901A;&#x8BBA;12/&#x884D;&#x5B58;&#x68AF;&#x5EA6;&#x793A;&#x610F;&#x56FE;.png" alt=""><br>&#x5411;&#x201D;&#x5854;&#x5C16;&#x201D;&#x5C55;&#x671B;&#xFF1A;&#x5C5E;&#x6027;&#x5206;&#x5316;&#x9012;&#x4E30;&#xFF0C;&#x80FD;&#x52A8;&#x6027;&#x6216;&#x673A;&#x80FD;&#x9012;&#x5F3A;&#xFF0C;&#x5B9E;&#x4F53;&#x7ED3;&#x6784;&#x503E;&#x5411;&#x7E41;&#x590D;&#xFF0C;&#x603B;&#x4E4B;&#xFF0C;&#x81EA;&#x4E3A;&#x7A0B;&#x5EA6;&#x9010;&#x7EA7;&#x6D6E;&#x5668;&#x3002;</p>
+<p>&#x5411;&#x201C;&#x5854;&#x57FA;&#x201D;&#x56DE;&#x987E;&#xFF1A;&#x884D;&#x5B58;&#x8D28;&#x91CF;&#x9012;&#x4E30;&#xFF0C;&#x884D;&#x5B58;&#x65F6;&#x5EA6;&#x9012;&#x957F;&#xFF0C;&#x7ED3;&#x6784;&#x72B6;&#x6001;&#x503E;&#x5411;&#x7B80;&#x7EA6;&#xFF0C;&#x603B;&#x4E4B;&#xFF0C;&#x81EA;&#x5728;&#x7A0B;&#x5EA6;&#x9010;&#x5C42;&#x6DF1;&#x539A;&#x3002;</p>
+<p>&#x5B87;&#x5B99;&#x7269;&#x6F14;&#x7684;&#x57FA;&#x672C;&#x5B58;&#x6001;&#x59CB;&#x7EC8;&#x662F;&#x67D0;&#x79CD;&#x524D;&#x65F6;&#x7A7A;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x4E00;&#x5F20;&#x5143;&#x7D20;&#x5468;&#x671F;&#x8868;&#xFF0C;&#x5728;&#x67D0;&#x79CD;&#x7A0B;&#x5EA6;&#x4E0A;&#x65E2;&#x8868;&#x8FBE;&#x7740;&#x5404;&#x4E2A;&#x5143;&#x7D20;<strong>&#x5728;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x8FDF;&#x5B58;&#x987A;&#x5E8F;</strong>&#xFF0C;&#x4E5F;&#x8868;&#x8FBE;&#x7740;&#x5404;&#x4E2A;&#x5143;&#x7D20;<strong>&#x5728;&#x7A7A;&#x95F4;&#x6216;&#x8D28;&#x91CF;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x9012;&#x51CF;&#x6001;&#x52BF;</strong>&#x3002;</p>
+<p>&#x5206;&#x5B50;&#x7269;&#x6001;&#x65E2;&#x8FDF;&#x53D1;&#x4E8E;&#x5B83;&#x7684;&#x524D;&#x4F53;&#x7269;&#x8D28;&#x53C8;&#x65E9;&#x4EA1;&#x4E8E;&#x5B83;&#x7684;&#x524D;&#x4F53;&#x7269;&#x8D28;&#x3002;</p>
+<p>&#x4EBA;&#x7C7B;&#x65E0;&#x7591;&#x662F;&#x6574;&#x4E2A;&#x751F;&#x7269;&#x7CFB;&#x7EDF;&#x4E2D;&#x6700;&#x6D3B;&#x8DC3;&#x7684;&#x4E00;&#x7CFB;&#xFF0C;&#x4E5F;&#x662F;&#x751F;&#x5B58;&#x65B9;&#x5F0F;&#x6700;&#x52A8;&#x8361;&#x7684;&#x4E00;&#x65CF;&#xFF0C;&#x5C3D;&#x7BA1;&#x4ED6;&#x4EEC;&#x773C;&#x4E0B;&#x770B;&#x8D77;&#x6765;&#x8FD8;&#x5728;&#x84EC;&#x52C3;&#x53D1;&#x5C55;&#xFF0C;&#x4F46;&#x5DF2;&#x7ECF;&#x521D;&#x6B65;&#x6D41;&#x9732;&#x51FA;<strong>&#x8870;&#x7AED;&#x524D;&#x7684;&#x8FC7;&#x76DB;&#x5371;&#x8C61;</strong>&#x3002;</p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/11/物演通论-自然哲学论-物演通论13/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          自然存在度存在趋势
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/11/物演通论-自然哲学论-物演通论11/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">存在度的分布</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt" style="margin-left:40px;">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="物演通论-自然哲学论-物演通论12" data-title="物态递变梯度" data-url="http://zj831007.github.io/2016/02/11/物演通论-自然哲学论-物演通论12/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"esimple"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 以简之名
+    	</div>
+      	<div class="footer-right">
+      		
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+  </div>
+</body>
+</html>
